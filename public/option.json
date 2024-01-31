@@ -1,0 +1,10 @@
+{
+    
+  "location": ["Bangalore", "Chennai", "Mumbai", "Delhi"],
+  "bodyType": ["Hatchback", "Sedan", "SUV"],  
+    "brand": ["Wagon R", "Celerio", "Swift", "Swift Dzire"],
+    "owners": ["1st Owner", "2nd Owner", "3rd Owner"],
+    "budget": ["Less than 2L", "2L-4L", "4L-6L", "More than 6 L"],
+    "fuelType": ["Petrol", "Diesel", "CNG"],
+    "transmission": ["Automatic", "Manual"]
+  }

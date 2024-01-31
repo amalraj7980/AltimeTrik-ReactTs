@@ -1,0 +1,36 @@
+.header {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo-img {
+  max-width: 100px;
+  margin-right: 50px;
+  padding: 20px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 10;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}

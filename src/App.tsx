@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
+import HomeScreen from './pages/HomeScreen';
+import ResultsPage from './pages/ResultsPage';
+import { Provider } from 'react-redux';
+import { store } from './redux/store/store';
+import { AppProvider } from './context-provider/AppProvider'; // Import AppProvider
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <AppProvider> {/* Wrap your entire app with AppProvider */}
+        <Router>
+          <div className="app">
+            <Header />
+            <Routes>
+              <Route path="/" element={<HomeScreen />} />
+              <Route path="/results" element={<ResultsPage />} />
+            </Routes>
+          </div>
+        </Router>
+      </AppProvider>
+    </Provider>
   );
-}
+};
 
 export default App;
